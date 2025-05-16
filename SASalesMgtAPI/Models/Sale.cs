@@ -1,4 +1,6 @@
-﻿namespace SASalesMgtAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SASalesMgtAPI.Models
 {
     public class SaleTotals
     {
@@ -50,6 +52,28 @@
         public string? City { get; set; }
         public string? State { get; set; }
         public string? ZipCode { get; set; }
+
+    }
+
+    public class SaleOrderNew
+    {
+        
+        public int ID { get; set; }
+        [Required]
+        public int CustomerID { get; set; }
+        [Required]
+        public int ConsigneeID { get; set; }
+        public int PriceBookID { get; set; }
+        [Required]
+        public int SalesPersonID { get; set; }
+        [Required]
+        public int StatusID { get; set; }
+        [Required]
+        public string? SaleDate { get; set; }
+        public string? CustomerPO {  get; set; }
+        public string? CustomerName { get; set; }
+        public int PmtTermID { get; set; }
+        public int DelTermID { get; set; } 
 
     }
 }
